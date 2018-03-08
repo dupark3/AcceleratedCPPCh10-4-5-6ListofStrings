@@ -1,5 +1,3 @@
-
-
 #include "String_list.h"
 
 
@@ -16,6 +14,14 @@ char* String_list::access (int n) const{
     // else throw error?
 }
 
-int String_list::size(){
+int String_list::size() const{
     return numOfElements;
+}
+
+char** String_list::begin() const{
+    return words;
+}
+
+char** String_list::end() const{
+    return words + numOfElements;
 }

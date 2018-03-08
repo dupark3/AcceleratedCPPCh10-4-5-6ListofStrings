@@ -10,7 +10,9 @@ public:
     String_list(); // default constructor
     void push_back(char*);
     char* access (int) const;
-    int size();
+    int size() const;
+    char** begin() const;
+    char** end() const;
 
 private:
     char **words;
