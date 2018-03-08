@@ -36,5 +36,16 @@ int main(int argc, char **argv)
     std::cout << *(myStringList1.end() - 1) << std::endl;
 
 
+    // obtain a line using getline, pass it to split function
+    std::cout << std::endl << std::endl << "Write a line to split: ";
+    std::string s;
+    String_list myStringList2;
+    while(getline(std::cin, s))
+        split(s, myStringList2)
+
+    // print results
+    for (size_t i = 0; i < myStringList2.size(); ++i)
+        std::cout << myStringList2.access(i) << std::endl;
+
     return 0;
 }
