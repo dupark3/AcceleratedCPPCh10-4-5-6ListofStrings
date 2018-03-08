@@ -18,6 +18,7 @@ Test the class by rewriting the split function to put its output into a String_l
 
 int main(int argc, char **argv)
 {
+// 10-4
     // initialize an object of my class String_list
     String_list myStringList1;
 
@@ -29,19 +30,25 @@ int main(int argc, char **argv)
     for (size_t i = 0; i < myStringList1.size(); ++i)
         std::cout << myStringList1.access(i) << std::endl;
 
+
+
+// 10-5 
     // accessing bidirectional iterator
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
     std::cout << *myStringList1.begin() << std::endl;
-    std::cout << *myStringList1.begin()++ << std::endl;
+    std::cout << *(myStringList1.begin() + 1) << std::endl;
     std::cout << *(myStringList1.end() - 1) << std::endl;
 
 
+
+// 10-6
     // obtain a line using getline, pass it to split function
-    std::cout << std::endl << std::endl << "Write a line to split: ";
     std::string s;
     String_list myStringList2;
+
+    std::cout << std::endl << "Write a line to split: ";
     while(getline(std::cin, s))
-        split(s, myStringList2)
+        split(s, myStringList2);
 
     // print results
     for (size_t i = 0; i < myStringList2.size(); ++i)
